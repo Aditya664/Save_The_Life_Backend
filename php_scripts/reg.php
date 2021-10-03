@@ -1,4 +1,5 @@
 <?php
+
     require 'init.php';
     $name = $_POST["name"];
     $city = $_POST["city"];
@@ -6,14 +7,13 @@
     $password = $_POST["password"];
     $number = $_POST["number"];
 
-    
+
     $sql = "INSERT INTO user_table (name, city, blood_grp, password, number) VALUES('$name', '$city', '$blood_group', '$password', '$number')";
-    
+
     $result = mysqli_query($con, $sql);
-    if($result){
+    if ($result) {
         //echo "Success";
-    }else{
+    } else {
         //echo "Error: ".mysqli_error($con);
     }
     mysqli_close($con);
-?>
